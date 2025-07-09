@@ -1,15 +1,19 @@
 import Dock from '@/components/custom/dock'
-import { Card } from '@/components/ui/card'
+import Hero from '@/components/custom/hero'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-200 text-gray-900">
+    <div className="min-h-screen bg-neutral-50/25 flex flex-col items-center justify-center p-4">
+      <Image
+				src="/images/background.jpg"
+				alt="background"
+				className="fixed top-0 left-0 w-full h-full object-cover z-[-1] animate-pulse"
+				width={1920}
+				height={1080}
+			/>
       <Dock />
-      <div className="flex items-center justify-center min-h-screen">
-        <Card className="p-4 shadow-xl">
-          <h1 className="text-2xl font-bold">Hello.</h1>
-        </Card>
-      </div>
+      <Hero />
     </div>
   )
 }
