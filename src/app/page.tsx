@@ -1,4 +1,5 @@
 import Dock from '@/components/custom/dock'
+import Header from '@/components/custom/header'
 import HomeSection from '@/components/sections/home'
 import Image from 'next/image'
 
@@ -13,6 +14,7 @@ export default function Home() {
         height={1080}
       />
       <Dock />
+      <Header />
       <main>
         <HomeSection />
       </main>
