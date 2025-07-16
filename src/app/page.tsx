@@ -39,13 +39,8 @@ export default function Home() {
             <p className="text-sm lg:text-base font-semibold">{hero.title}</p>
             <p className="text-xs lg:text-sm">{hero.description}</p>
             <p className="text-xs lg:text-sm italic">{hero.location}</p>
+            <p className="hidden lg:block text-xs text-gray-500">© 2025 @jfhoquindo — all rights reserved.</p>
           </div>
-
-          {/* Footer - only show on large screens in left column */}
-          <footer className="hidden lg:block absolute bottom-8 text-center">
-            <p className="text-sm text-gray-600">Made with 🩷</p>
-            <p className="text-xs text-gray-500">© 2025 @jfhoquindo — all rights reserved.</p>
-          </footer>
         </div>
 
         {/* Scrollable Right Column */}
