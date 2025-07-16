@@ -3,10 +3,11 @@ import Image from 'next/image'
 import { hero } from '@/data/information'
 import Skills from '@/components/sections/skills'
 import Experience from '@/components/sections/experience'
+import Projects from '@/components/sections/projects'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-neutral-50/25 flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-neutral-50/25 flex flex-col items-center justify-center p-10">
       {/* Background Image */}
       <Image
         src="/images/background.jpg"
@@ -21,8 +22,8 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl p-4">
-        {/* Left Column (Fixed) */}
-        <div className="space-y-2 text-center lg:text-left sticky top-4 self-start">
+        {/* Left Column */}
+        <div className="space-y-2 text-center lg:text-left">
           <Image
             src="/images/profile.jpeg"
             alt="Profile Picture"
@@ -37,10 +38,11 @@ export default function Home() {
           <p className="italic">{hero.location}</p>
         </div>
 
-        {/* Right Column (Scrollable) */}
-        <div className="space-y-8 overflow-y-auto max-h-[calc(100vh-2rem)]">
-          <Skills />
+        {/* Right Column */}
+        <div className="space-y-8">
+          <Projects />
           <Experience />
+          <Skills />
         </div>
       </main>
 

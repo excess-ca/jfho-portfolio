@@ -1,6 +1,6 @@
 const hero = {
   name: 'Julia Francesca Oquindo',
-  title: '🚀 Full-Stack Web Developer',
+  title: '🎈 Full-Stack Web Developer',
   description: '🍃 eudaimonia',
   location: '1016 Manila, Philippines'
 }
@@ -9,7 +9,7 @@ const experience = {
   items: [
     {
       company: 'Wizy Software Labs Inc.',
-      duration: 'March 2025 - June 2025',
+      duration: '2025/03 - 2025-06',
       description:
         'Completed a 560-hour internship focused on full-stack web development, using Next.JS, Node.JS, Express, and PostgreSQL with Sequelize ORM.',
       link: 'https://wizy.io/'
@@ -17,4 +17,21 @@ const experience = {
   ]
 }
 
-export { hero, experience }
+const projects = {
+  items: [
+    {
+      title: 'Task Management App',
+      duration: '2025/04 - 2025-06',
+      description: 'Developed a full-stack task management application using Next.JS, Node.JS, Express, and PostgreSQL with Sequelize ORM. The app features user authentication, task creation, and real-time updates. Backend deployment currently offline.',
+      link: 'https://task-app-henna-gamma.vercel.app'
+    },
+    {
+      title: 'Initial Portfolio Website',
+      duration: '2025/03',
+      description: 'Created a personal portfolio website to showcase my skills and projects, built with Next.JS, with support for english and french languages.',
+      link: 'https://my-portfolio-seven-kohl-23.vercel.app/en'
+    }
+  ]
+}
+
+export { hero, experience, projects }

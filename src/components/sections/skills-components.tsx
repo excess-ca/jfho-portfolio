@@ -15,7 +15,6 @@ import { IoLogoBitbucket, IoLogoCss3, IoLogoHtml5 } from 'react-icons/io'
 import { RiTailwindCssFill } from 'react-icons/ri'
 import {
   SiCanva,
-  SiDotnet,
   SiExpress,
   SiJavascript,
   SiJira,
@@ -43,7 +42,6 @@ export function Languages() {
           <FaPhp className="text-3xl text-purple-600" title="PHP" />
           <FaJava className="text-2xl text-red-600" title="Java" />
           <FaPython className="text-2xl text-yellow-500" title="Python" />
-          <SiDotnet className="text-2xl text-blue-600" title=".NET" />
         </div>
       </div>
     </div>
