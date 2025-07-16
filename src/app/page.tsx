@@ -4,6 +4,7 @@ import { hero } from '@/data/information'
 import Skills from '@/components/sections/skills'
 import Experience from '@/components/sections/experience'
 import Projects from '@/components/sections/projects'
+import Education from '@/components/sections/education'
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
           <Projects />
           <Experience />
           <Skills />
+          <Education />
         </div>
       </main>
 

@@ -34,4 +34,15 @@ const projects = {
   ]
 }
 
-export { hero, experience, projects }
+const education = {
+  items: [
+    {
+      institution: 'Polytechnic University of the Philippines',
+      duration: '2021 - Present',
+      degree: 'Bachelor of Science in Information Technology',
+      link: 'https://www.pup.edu.ph'
+    },
+  ]
+}
+
+export { hero, experience, projects, education }
