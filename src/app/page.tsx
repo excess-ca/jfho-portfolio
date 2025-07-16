@@ -39,7 +39,9 @@ export default function Home() {
             <p className="text-sm lg:text-base font-semibold">{hero.title}</p>
             <p className="text-xs lg:text-sm">{hero.description}</p>
             <p className="text-xs lg:text-sm italic">{hero.location}</p>
-            <p className="hidden lg:block text-xs text-gray-500">© 2025 @jfhoquindo — all rights reserved.</p>
+            <p className="hidden lg:block text-xs text-gray-500">
+              © 2025 @jfhoquindo — all rights reserved.
+            </p>
           </div>
         </div>
 
@@ -55,7 +57,9 @@ export default function Home() {
               {/* Footer for mobile */}
               <footer className="lg:hidden text-center mt-8">
                 <p className="text-sm text-gray-600">Made with 🩷</p>
-                <p className="text-xs text-gray-500">© 2025 @jfhoquindo — all rights reserved.</p>
+                <p className="text-xs text-gray-500">
+                  © 2025 @jfhoquindo — all rights reserved.
+                </p>
               </footer>
 
               {/* Extra padding at bottom for better scrolling on desktop */}

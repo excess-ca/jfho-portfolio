@@ -1,6 +1,6 @@
-import { Separator } from "@/components/ui/separator";
-import { projects } from "@/data/information";
-import { GoLinkExternal } from "react-icons/go";
+import { Separator } from '@/components/ui/separator'
+import { projects } from '@/data/information'
+import { GoLinkExternal } from 'react-icons/go'
 
 export default function Projects() {
   return (
@@ -44,12 +44,14 @@ export default function Projects() {
                   </a>
                 )}
               </div>
-              <p className="text-xs italic text-neutral-500">{project.duration}</p>
+              <p className="text-xs italic text-neutral-500">
+                {project.duration}
+              </p>
             </div>
             <p className="text-sm text-neutral-700">{project.description}</p>
           </div>
         ))}
       </section>
     </section>
-  );
+  )
 }

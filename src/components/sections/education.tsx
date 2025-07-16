@@ -1,6 +1,6 @@
-import { Separator } from "@/components/ui/separator";
-import { education } from "@/data/information";
-import { GoLinkExternal } from "react-icons/go";
+import { Separator } from '@/components/ui/separator'
+import { education } from '@/data/information'
+import { GoLinkExternal } from 'react-icons/go'
 
 export default function Education() {
   return (
@@ -51,5 +51,5 @@ export default function Education() {
         ))}
       </section>
     </section>
-  );
+  )
 }

@@ -46,7 +46,7 @@ export default function Experience() {
               </div>
               <p className="text-xs italic text-neutral-500">{item.duration}</p>
             </div>
-            <p className='text-sm text-neutral-700'>{item.description}</p>
+            <p className="text-sm text-neutral-700">{item.description}</p>
           </div>
         ))}
       </section>

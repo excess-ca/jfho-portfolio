@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'JFH Oquindo | Developer',
-  description: 'Julia Francesca H. Oquindo, software developer, specializing in web development.',
+  description:
+    'Julia Francesca H. Oquindo, software developer, specializing in web development.'
 }
 
 export default function RootLayout({

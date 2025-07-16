@@ -124,7 +124,7 @@ export function Projectmanagement() {
   )
 }
 
-export function Design(){
+export function Design() {
   return (
     <div className="space-y-2">
       <div className="flex items-center space-x-2">
