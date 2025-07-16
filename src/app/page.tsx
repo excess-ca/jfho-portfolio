@@ -1,10 +1,12 @@
 import Dock from '@/components/custom/dock'
 import Image from 'next/image'
 import { hero } from '@/data/information'
+import Skills from '@/components/sections/skills'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-neutral-50/25 flex flex-col items-center justify-center p-4">
+      {/* Background Image */}
       <Image
         src="/images/background.jpg"
         alt="background"
@@ -12,9 +14,14 @@ export default function Home() {
         width={1920}
         height={1080}
       />
+
+      {/* Dock */}
       <Dock />
+
+      {/* Main Content */}
       <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl p-4">
-        <div className="space-y-2 text-center lg:text-left">
+        {/* Left Column (Fixed) */}
+        <div className="space-y-2 text-center lg:text-left sticky top-4 self-start">
           <Image
             src="/images/profile.jpeg"
             alt="Profile Picture"
@@ -23,16 +30,19 @@ export default function Home() {
             height={800}
             priority
           />
-          <h1 className='text-2xl font-bold'>{hero.name}</h1>
-          <p className='font-semibold'>{hero.title}</p>
+          <h1 className="text-2xl font-bold">{hero.name}</h1>
+          <p className="font-semibold">{hero.title}</p>
           <p>{hero.description}</p>
-          <p className='italic'>{hero.location}</p>
+          <p className="italic">{hero.location}</p>
         </div>
 
-        <div className="space-y-4">
-          <h2>hey</h2>
+        {/* Right Column (Scrollable) */}
+        <div className="space-y-4 overflow-y-auto max-h-[calc(100vh-2rem)]">
+          <Skills />
         </div>
       </main>
+
+      {/* Footer */}
       <footer className="text-center mt-8">
         <p className="text-sm text-gray-600">Made with 🩷</p>
         <p className="text-xs text-gray-500">
