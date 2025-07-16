@@ -1,103 +1,69 @@
+import Dock from '@/components/custom/dock'
 import Image from 'next/image'
+import { hero } from '@/data/information'
+import Skills from '@/components/sections/skills'
+import Experience from '@/components/sections/experience'
+import Projects from '@/components/sections/projects'
+import Education from '@/components/sections/education'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen">
+      {/* Background Image */}
+      <Image
+        src="/images/background.jpg"
+        alt="background"
+        className="fixed top-0 left-0 w-screen h-screen object-cover z-[-1] animate-pulse"
+        width={1920}
+        height={1080}
+        style={{ minWidth: '100%', minHeight: '100%' }}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      {/* Dock */}
+      <Dock />
+
+      {/* Main Layout */}
+      <div className="flex flex-col lg:flex-row h-screen">
+        {/* Left Column */}
+        <div className="w-full lg:w-1/2 lg:fixed lg:left-0 lg:top-0 lg:h-full flex flex-col items-center justify-center p-6 lg:p-10">
+          <div className="space-y-4 text-center lg:text-left max-w-md">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/images/profile.jpeg"
+              alt="Profile Picture"
+              className="rounded-full w-28 h-28 mx-auto lg:mx-0"
+              width={800}
+              height={800}
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <h1 className="text-xl lg:text-2xl font-bold">{hero.name}</h1>
+            <p className="text-sm lg:text-base font-semibold">{hero.title}</p>
+            <p className="text-xs lg:text-sm">{hero.description}</p>
+            <p className="text-xs lg:text-sm italic">{hero.location}</p>
+            <p className="hidden lg:block text-xs text-gray-500">© 2025 @jfhoquindo — all rights reserved.</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Scrollable Right Column */}
+        <div className="w-full lg:w-1/2 lg:ml-auto">
+          <div className="overflow-y-auto p-4 lg:p-10">
+            <div className="space-y-8 lg:pt-16">
+              <Projects />
+              <Experience />
+              <Skills />
+              <Education />
+
+              {/* Footer for mobile */}
+              <footer className="lg:hidden text-center mt-8">
+                <p className="text-sm text-gray-600">Made with 🩷</p>
+                <p className="text-xs text-gray-500">© 2025 @jfhoquindo — all rights reserved.</p>
+              </footer>
+
+              {/* Extra padding at bottom for better scrolling on desktop */}
+              <div className="hidden lg:block pb-20"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
