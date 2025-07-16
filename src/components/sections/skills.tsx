@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { Databases, Devops, Frameworks, Languages, Projectmanagement } from "@/components/sections/skills-components";
+import { Databases, Design, Devops, Frameworks, Languages, Projectmanagement } from "@/components/sections/skills-components";
 
 export default function Skills() {
   return(
@@ -20,6 +20,9 @@ export default function Skills() {
       </section>
       <section className="flex gap-2">
         <Projectmanagement />
+      </section>
+      <section className="flex gap-2">
+        <Design />
       </section>
     </section>
   )

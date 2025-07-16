@@ -2,6 +2,7 @@ import Dock from '@/components/custom/dock'
 import Image from 'next/image'
 import { hero } from '@/data/information'
 import Skills from '@/components/sections/skills'
+import Experience from '@/components/sections/experience'
 
 export default function Home() {
   return (
@@ -37,8 +38,9 @@ export default function Home() {
         </div>
 
         {/* Right Column (Scrollable) */}
-        <div className="space-y-4 overflow-y-auto max-h-[calc(100vh-2rem)]">
+        <div className="space-y-8 overflow-y-auto max-h-[calc(100vh-2rem)]">
           <Skills />
+          <Experience />
         </div>
       </main>
 
