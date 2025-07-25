@@ -9,6 +9,15 @@ const experience = {
   items: [
     {
       company: 'Wizy Software Labs Inc.',
+      position: 'Junior Software Developer',
+      duration: '2025/07 - Present',
+      description:
+        'Focused on front-end development using React and Typescript.',
+      link: 'https://wizy.io/'
+    },
+    {
+      company: 'Wizy Software Labs Inc.',
+      position: 'Software Developer Intern',
       duration: '2025/03 - 2025-06',
       description:
         'Completed a 560-hour internship focused on full-stack web development, using Next.JS, Node.JS, Express, and PostgreSQL with Sequelize ORM.',

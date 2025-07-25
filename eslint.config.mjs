@@ -24,6 +24,8 @@ export default defineConfig([
 		},
 		plugins: {
 			js,
+			react: require.resolve("eslint-plugin-react"),
+			"typescript-eslint": require.resolve("@typescript-eslint/eslint-plugin"),
 		},
 		rules: {
 			// * Allow console.warn and console.error only

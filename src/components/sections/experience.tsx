@@ -14,8 +14,9 @@ export default function Experience() {
               <div className="flex items-center space-x-2">
                 {item.link ? (
                   <>
-                    <span className="hidden lg:inline font-semibold text-neutral-900">
-                      {item.company}
+                    <span className="hidden lg:inline text-neutral-900">
+                      <span className="italic">{item.position}</span> |{' '}
+                      <span className="font-semibold">{item.company}</span>
                     </span>
                     <a
                       aria-label={`Visit ${item.company} website`}
@@ -24,7 +25,7 @@ export default function Experience() {
                       rel="noopener noreferrer"
                       className="font-semibold text-blue-500 hover:text-blue-700 transition-colors lg:hidden"
                     >
-                      {item.company}
+                      {item.position}
                     </a>
                   </>
                 ) : (
@@ -46,7 +47,7 @@ export default function Experience() {
               </div>
               <p className="text-xs italic text-neutral-500">{item.duration}</p>
             </div>
-            <p className='text-sm text-neutral-700'>{item.description}</p>
+            <p className="text-sm text-neutral-700">{item.description}</p>
           </div>
         ))}
       </section>
